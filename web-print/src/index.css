@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * web-print: Global Styles
+ */
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc; /* slate-50 */
+  color: #0f172a; /* slate-900 */
+}
+
+/* Ensure the app takes up the full screen */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents the whole page from scrolling */
+}
+
+/* Fabric.js Canvas Container Styling */
+/* This centers the 'paper' and adds the professional shadow */
+.canvas-container {
+  margin: 0 auto !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Premium Scrollbar for the Inspector and Sidebar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0; /* slate-200 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1; /* slate-300 */
+}
+
+/* Canvas Workspace Grid (Optional: subtle dots) */
+main {
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Selection Handle Tweaks */
+.canvas-container:focus {
+  outline: none;
+}
